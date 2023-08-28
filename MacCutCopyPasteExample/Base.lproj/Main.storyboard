@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="MacCutCopyPasteExample" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="MacCutCopyPasteExample" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About MacCutCopyPasteExample" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide MacCutCopyPasteExample" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit MacCutCopyPasteExample" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MacCutCopyPasteExample" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="-18"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="MacCutCopyPasteExample" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--MacCutCopyPasteExample-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController title="MacCutCopyPasteExample" id="XfG-lQ-9wD" customClass="ViewController" customModule="MacCutCopyPasteExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="568"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDG-QI-5B1">
+                                <rect key="frame" x="108" y="405" width="264" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="YRI-Ic-sBb"/>
+                                    <constraint firstAttribute="height" constant="179" id="Z94-Ne-C2S"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="aNd-h9-scU"/>
+                                <connections>
+                                    <action selector="sourceImageView:" target="XfG-lQ-9wD" id="xyu-1R-w4B"/>
+                                </connections>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-i1-z7O">
+                                <rect key="frame" x="108" y="12" width="264" height="179"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="EJj-Ob-7d1"/>
+                                <connections>
+                                    <action selector="destImageView:" target="XfG-lQ-9wD" id="dtl-89-ydy"/>
+                                </connections>
+                            </imageView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sua-MA-RZO">
+                                <rect key="frame" x="172" y="254" width="116" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="q6j-KM-j26"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="Copy" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ILj-ga-Qee">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="mnuCopy:" target="XfG-lQ-9wD" id="Sue-x6-DwD"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="htM-NB-vUA">
+                                <rect key="frame" x="322" y="254" width="116" height="59"/>
+                                <buttonCell key="cell" type="square" title="Paste" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BEz-cm-r9R">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="mnuPaste:" target="XfG-lQ-9wD" id="iUe-Dg-ZVq"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZXW-n9-8Q5">
+                                <rect key="frame" x="26" y="254" width="116" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="G4c-Zb-nxG"/>
+                                    <constraint firstAttribute="height" constant="59" id="snJ-rD-WS1"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="Cut" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kn0-Fo-Osv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="mnuCut:" target="XfG-lQ-9wD" id="32d-tz-lqn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sua-MA-RZO" firstAttribute="leading" secondItem="ZXW-n9-8Q5" secondAttribute="trailing" constant="30" id="2Po-u8-dQv"/>
+                            <constraint firstItem="uY9-i1-z7O" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="2xx-Xd-zEB"/>
+                            <constraint firstAttribute="bottom" secondItem="uY9-i1-z7O" secondAttribute="bottom" constant="12" id="3UH-XE-0tZ"/>
+                            <constraint firstItem="qDG-QI-5B1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="-16" id="4eJ-mx-qfg"/>
+                            <constraint firstAttribute="trailing" secondItem="htM-NB-vUA" secondAttribute="trailing" constant="42" id="5uV-nG-7vT"/>
+                            <constraint firstItem="ZXW-n9-8Q5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="26" id="7vA-KE-XKY"/>
+                            <constraint firstItem="qDG-QI-5B1" firstAttribute="leading" secondItem="uY9-i1-z7O" secondAttribute="leading" id="MsA-xy-jiw"/>
+                            <constraint firstItem="htM-NB-vUA" firstAttribute="leading" secondItem="sua-MA-RZO" secondAttribute="trailing" constant="34" id="Xqu-vv-jRt"/>
+                            <constraint firstItem="ZXW-n9-8Q5" firstAttribute="baseline" secondItem="sua-MA-RZO" secondAttribute="baseline" id="ZEv-M7-Lcr"/>
+                            <constraint firstItem="sua-MA-RZO" firstAttribute="baseline" secondItem="htM-NB-vUA" secondAttribute="baseline" id="cDC-d6-Gux"/>
+                            <constraint firstItem="ZXW-n9-8Q5" firstAttribute="firstBaseline" secondItem="sua-MA-RZO" secondAttribute="firstBaseline" id="fHL-ib-Rrt"/>
+                            <constraint firstItem="sua-MA-RZO" firstAttribute="firstBaseline" secondItem="htM-NB-vUA" secondAttribute="firstBaseline" id="kwU-zs-TLJ"/>
+                            <constraint firstItem="qDG-QI-5B1" firstAttribute="trailing" secondItem="uY9-i1-z7O" secondAttribute="trailing" id="lqE-fV-jj9"/>
+                            <constraint firstItem="uY9-i1-z7O" firstAttribute="top" secondItem="ZXW-n9-8Q5" secondAttribute="bottom" constant="63" id="s6A-H4-sUg"/>
+                            <constraint firstItem="ZXW-n9-8Q5" firstAttribute="top" secondItem="qDG-QI-5B1" secondAttribute="bottom" constant="92" id="z9s-ew-b5f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="destImageView" destination="uY9-i1-z7O" id="fg7-Ir-iUw"/>
+                        <outlet property="sourceImageView" destination="qDG-QI-5B1" id="juh-wa-8JX"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="810"/>
+        </scene>
+    </scenes>
+</document>
